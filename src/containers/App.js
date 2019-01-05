@@ -3,6 +3,7 @@ import '../styles/index.scss';
 import { fetchArticles } from '../thunks/fetchArticles';
 import apiKey from '../apiKey';
 import { connect } from 'react-redux';
+import Landing from './Landing';
 
 class App extends Component {
 
@@ -27,7 +28,7 @@ class App extends Component {
     console.log(sources)
     return (
       <div className="App">
-        
+        <Landing />
       </div>
     );
   }
