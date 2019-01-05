@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import '../styles/index.scss';
 import { fetchArticles } from '../thunks/fetchArticles';
 import apiKey from '../apiKey';
 import { connect } from 'react-redux';
