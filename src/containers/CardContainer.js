@@ -15,10 +15,9 @@ class CardContainer extends Component {
     const articlesToDisplay = this.props.articles.map((article) => {
       return <Card article={article} />
     })
-    // console.log(this.props.articles)
+    console.log(this.props.articles)
     return (
       <section className="card-container">
-        <h1>CardContainer</h1>
         {articlesToDisplay}
       </section>
     )
