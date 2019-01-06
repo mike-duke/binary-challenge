@@ -3,6 +3,7 @@ import '../styles/index.scss';
 import { connect } from 'react-redux';
 import Landing from './Landing';
 import CardContainer from './CardContainer';
+import Nav from '../components/Nav';
 
 class App extends Component {
 
@@ -10,7 +11,10 @@ class App extends Component {
     if (this.props.topic) {
       return (
         <div className="App">
-          <CardContainer />
+          <div className="card-and-nav-container">
+            <CardContainer />
+            <Nav />
+          </div>
         </div>
       )
     } else {
@@ -20,18 +24,6 @@ class App extends Component {
         </div>
       );
     }
-    // const sources = this.props.articles.reduce((acc, article) => {
-    //   const { name } = article.source
-    //   if (!acc.includes(name)) {
-    //     acc.push(name);
-    //   }
-    // //   if (name === "BBC News") {
-    // //   acc.push(article)
-    // // }
-    //   return acc;
-    // }, [])
-
-    // console.log(sources)
   }
 }
 
