@@ -7,7 +7,7 @@ import { fetchArticles } from '../thunks/fetchArticles';
 class CardContainer extends Component {
 
   componentDidMount() {
-    const url = `https://newsapi.org/v2/everything?q=+parents AND (kid OR kid OR child OR children) AND ${this.props.topic}&pageSize=20&language=en&sortBy=relevancy&apiKey=${apiKey}`;
+    const url = `https://newsapi.org/v2/everything?q=+(parent OR parents) AND +(kid OR kids OR child OR children) AND ${this.props.topic}&pageSize=20&language=en&sortBy=popularity&apiKey=${apiKey}`;
     this.props.addArticlesToStore(url);
   }
   
