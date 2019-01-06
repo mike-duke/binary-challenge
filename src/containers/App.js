@@ -20,7 +20,9 @@ class App extends Component {
     } else {
       return (
         <div className="App">
-          <Landing />
+          <div className="landing-container">
+            <Landing />
+          </div>
         </div>
       );
     }
