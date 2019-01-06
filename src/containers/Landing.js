@@ -6,7 +6,8 @@ class Landing extends Component {
 
   handleChange = (event) => {
     const selection = event.target.value;
-    this.props.addTopicToStore(selection)
+    this.props.addTopicToStore(selection);
+    this.props.history.push('/relevant');
   }
 
   render() {

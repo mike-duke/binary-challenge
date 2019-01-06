@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { Card } from '../components/Card';
 import apiKey from '../apiKey';
 import { fetchArticles } from '../thunks/fetchArticles';
+import Nav from '../components/Nav';
+import Filter from '../containers/Filter';
 
 class CardContainer extends Component {
 
@@ -16,9 +18,14 @@ class CardContainer extends Component {
       return <Card article={article} />
     })
     console.log(this.props.articles)
+    
     return (
-      <section className="card-container">
-        {articlesToDisplay}
+      <section className="card-and-nav-container">
+        <div className="card-container">
+          {articlesToDisplay}
+          <Nav />
+        </div>
+        <Filter />
       </section>
     )
   }

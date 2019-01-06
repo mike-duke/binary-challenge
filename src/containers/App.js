@@ -3,37 +3,51 @@ import '../styles/index.scss';
 import { connect } from 'react-redux';
 import Landing from './Landing';
 import CardContainer from './CardContainer';
-import Nav from '../components/Nav';
+import { Switch, Route, withRouter } from 'react-router';
+import About from '../components/About';
 
 class App extends Component {
 
   render() {
-    if (this.props.topic) {
-      return (
-        <div className="App">
-          <div className="card-and-nav-container">
-            <CardContainer />
-            <Nav />
-          </div>
-        </div>
-      )
-    } else {
-      return (
-        <div className="App">
-          <Landing />
-        </div>
-      );
-    }
+    // if (this.props.topic) {
+    //   return (
+    //     <div className="App">
+    //       <div className="card-and-nav-container">
+    //         <CardContainer />
+    //         <Nav />
+    //         <Filter />
+    //       </div>
+    //     </div>
+    //   )
+    // } else {
+    //   return (
+    //     <div className="App">
+    //       <div className="landing-container">
+    //         <Landing />
+    //       </div>
+    //     </div>
+    //   );
+    // }
+
+    return (
+      <div className="App">
+        <Switch>
+          <Route exact path="/" component={Landing} />
+          <Route path="/relevant" component={CardContainer} />
+          <Route path="/current" component={CardContainer} />
+          <Route path="/saved" component={CardContainer} />
+          <Route parh="/about" component={About} />
+        </Switch>
+      </div>
+    )
   }
 }
+
+
 
 export const mapStateToProps = (state) => ({
   articles: state.articles,
   topic: state.topic
 })
 
-export const mapDispatchToProps = (dispatch) => ({
-  // addArticlesToStore: (url) => dispatch(fetchArticles(url))
-})
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default withRouter(connect(mapStateToProps)(App));
