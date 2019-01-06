@@ -9,26 +9,6 @@ import About from '../components/About';
 class App extends Component {
 
   render() {
-    // if (this.props.topic) {
-    //   return (
-    //     <div className="App">
-    //       <div className="card-and-nav-container">
-    //         <CardContainer />
-    //         <Nav />
-    //         <Filter />
-    //       </div>
-    //     </div>
-    //   )
-    // } else {
-    //   return (
-    //     <div className="App">
-    //       <div className="landing-container">
-    //         <Landing />
-    //       </div>
-    //     </div>
-    //   );
-    // }
-
     return (
       <div className="App">
         <Switch>
@@ -42,8 +22,6 @@ class App extends Component {
     )
   }
 }
-
-
 
 export const mapStateToProps = (state) => ({
   articles: state.articles,

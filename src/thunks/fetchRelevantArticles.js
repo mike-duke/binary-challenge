@@ -1,6 +1,6 @@
-import { addArticles } from '../actions';
+import { addRelevantArticles } from '../actions';
 
-export const fetchArticles = (url) => {
+export const fetchRelevantArticles = (url) => {
   return async (dispatch) => {
     try {
       const response = await fetch(url);
@@ -8,7 +8,7 @@ export const fetchArticles = (url) => {
         console.log(response.statusText);
       }
       const result = await response.json();
-      dispatch(addArticles(result.articles));
+      dispatch(addRelevantArticles(result.articles));
     } catch (error) {
       console.log(error);
     }

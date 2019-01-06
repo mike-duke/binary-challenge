@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
-import { articlesReducer } from './articlesReducer';
+import { relevantArticlesReducer } from './relevantArticlesReducer';
+import { currentArticlesReducer } from './currentArticlesReducer';
 import { topicReducer } from './topicReducer';
 
 export const rootReducer = combineReducers({
-  articles: articlesReducer,
+  relevantArticles: relevantArticlesReducer,
+  currentArticles: currentArticlesReducer,
   topic: topicReducer
 })
