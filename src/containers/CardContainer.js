@@ -19,16 +19,20 @@ class CardContainer extends Component {
   render() {
     const { path } = this.props.match;
     let articlesToDisplay;
+    let filterComponent;
     if (path === '/relevant') {
       articlesToDisplay = this.props.relevantArticles.map((article) => {
         return <Card article={article} />
       })
+      filterComponent = <Filter path={this.props.match.path}/>
     } else if (path === '/current') {
       articlesToDisplay = this.props.currentArticles.map((article) => {
         return <Card article={article} />
       })
+      filterComponent = null;
     } else if (path === '/saved') {
       articlesToDisplay = "saved articles";
+      filterComponent = null;
     }
     
     return (
@@ -37,7 +41,7 @@ class CardContainer extends Component {
           {articlesToDisplay}
           <Nav />
         </div>
-        <Filter path={this.props.match.path}/>
+        {filterComponent}
       </section>
     )
   }
