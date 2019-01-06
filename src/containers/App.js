@@ -3,8 +3,7 @@ import '../styles/index.scss';
 import { connect } from 'react-redux';
 import Landing from './Landing';
 import CardContainer from './CardContainer';
-import Filter from './Filter';
-import { Switch, Route } from 'react-router';
+import { Switch, Route, withRouter } from 'react-router';
 import About from '../components/About';
 
 class App extends Component {
@@ -51,4 +50,4 @@ export const mapStateToProps = (state) => ({
   topic: state.topic
 })
 
-export default connect(mapStateToProps)(App);
+export default withRouter(connect(mapStateToProps)(App));

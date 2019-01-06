@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addTopic } from '../actions';
-import { Link } from 'react-router-dom';
 
 class Landing extends Component {
 
   handleChange = (event) => {
     const selection = event.target.value;
-    this.props.addTopicToStore(selection)
+    this.props.addTopicToStore(selection);
+    this.props.history.push('/relevant');
   }
 
   render() {
@@ -15,7 +15,6 @@ class Landing extends Component {
       <div className="landing">
         <h1>Torcano</h1>
         <p>Find the latest news from trusted sources on topics that affect your children, or see what is happening in the world today so you see what they see</p>
-        <Link to="/relevant">
         <select name="landing-select" id="landing-select" onChange={this.handleChange}>
           <option value="">Select a topic to gather articles</option>
           <option value="Anxiety">Anxiety</option>
@@ -23,7 +22,6 @@ class Landing extends Component {
           <option value="ADHD">ADHD</option>
           <option value="Autism">Autism</option>
         </select>
-        </Link>
       </div>
     )
   }
