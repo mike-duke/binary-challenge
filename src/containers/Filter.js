@@ -16,10 +16,10 @@ class Filter extends Component {
       url = `https://newsapi.org/v2/everything?q=+(parent OR parents) AND +(kid OR kids OR child OR children) AND ${selection}&pageSize=20&language=en&sortBy=popularity&apiKey=${apiKey}`;
     }
     
-    if (name === 'source-select' && value.includes('.com')) {
+    if (name === 'source-select' && value.includes('.')) {
       selection = this.props.topic;
       url = `https://newsapi.org/v2/everything?q=+(parent OR parents) AND +(kid OR kids OR child OR children) AND ${selection}&domains=${lowerCaseValue}&language=en&sortBy=popularity&apiKey=${apiKey}`;
-    } else if (name === 'source-select' && !value.includes('.com')) {
+    } else if (name === 'source-select' && !value.includes('.')) {
       selection = this.props.topic;
       url = `https://newsapi.org/v2/everything?q=+(parent OR parents) AND +(kid OR kids OR child OR children) AND ${selection}&sources=${lowerCaseValue}&language=en&sortBy=popularity&apiKey=${apiKey}`;
     }
@@ -31,11 +31,15 @@ class Filter extends Component {
   render() {
     const sourceOptions = this.props.articles.reduce((sources, article) => {
       if (!sources.includes(article.source.name)) {
-        sources.push(article.source.name);
+        sources.push(article.source);
       }
       return sources;
-    }, []).map((sourceName) => {
-      return <option value={sourceName}>{sourceName}</option>
+    }, []).map((source) => {
+      if (source.name.includes('.com')) {
+        return <option value={source.name}>{source.name}</option>
+      } else {
+        return <option value={source.id}>{source.name}</option>
+      }
     })
 
     return (
