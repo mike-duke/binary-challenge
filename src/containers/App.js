@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import Landing from './Landing';
 import CardContainer from './CardContainer';
 import Nav from '../components/Nav';
+import Filter from './Filter';
 
 class App extends Component {
 
@@ -14,6 +15,7 @@ class App extends Component {
           <div className="card-and-nav-container">
             <CardContainer />
             <Nav />
+            <Filter />
           </div>
         </div>
       )
