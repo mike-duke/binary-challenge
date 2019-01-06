@@ -1,9 +1,13 @@
 import React from 'react';
 
-export const Card = (props) => {
+export const Card = ({article}) => {
+  const { urlToImage, title, author } = article
   return (
-    <div className="card">
-      {props.article.title}
-    </div>
+    <article className="card">
+      <div className="image-container" style={{backgroundImage: `URL(${urlToImage})`}}>
+      </div>
+      <h3>{title}</h3>
+      <p>By {author}</p>
+    </article>
   )
 }
