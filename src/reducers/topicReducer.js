@@ -1,4 +1,4 @@
-export const topicReducer = (state = '', action) => {
+export const topicReducer = (state = 'anxiety', action) => {
   switch(action.type) {
     case 'ADD_TOPIC': 
       return action.topic;

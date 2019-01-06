@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addTopic } from '../actions';
-import { fetchArticles } from '../thunks/fetchArticles';
+import { fetchRelevantArticles } from '../thunks/fetchRelevantArticles';
 import apiKey from '../apiKey';
 
 class Filter extends Component {
@@ -17,6 +17,7 @@ class Filter extends Component {
     }
     
     if (name === 'source-select' && value.includes('.')) {
+      
       selection = this.props.topic;
       url = `https://newsapi.org/v2/everything?q=+(parent OR parents) AND +(kid OR kids OR child OR children) AND ${selection}&domains=${lowerCaseValue}&language=en&sortBy=popularity&apiKey=${apiKey}`;
     } else if (name === 'source-select' && !value.includes('.')) {
@@ -24,12 +25,12 @@ class Filter extends Component {
       url = `https://newsapi.org/v2/everything?q=+(parent OR parents) AND +(kid OR kids OR child OR children) AND ${selection}&sources=${lowerCaseValue}&language=en&sortBy=popularity&apiKey=${apiKey}`;
     }
     this.props.addArticlesToStore(url);
-    console.log(selection)
     this.props.addTopicToStore(selection);
   }
 
   render() {
-    const sourceOptions = this.props.articles.reduce((sources, article) => {
+    console.log(this.props.path)
+    const sourceOptions = this.props.relevantArticles.reduce((sources, article) => {
       if (!sources.includes(article.source.name)) {
         sources.push(article.source);
       }
@@ -63,13 +64,14 @@ class Filter extends Component {
 }
 
 export const mapStateToProps = (state) => ({
-  articles: state.articles,
+  relevantArticles: state.relevantArticles,
+  currentArticles: state.currentArticlesrticles,
   topic: state.topic
 });
 
 export const mapDispatchToProps = (dispatch) => ({
   addTopicToStore: (selection) => dispatch(addTopic(selection)),
-  addArticlesToStore: (url) => dispatch(fetchArticles(url))
+  addArticlesToStore: (url) => dispatch(fetchRelevantArticles(url))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Filter);

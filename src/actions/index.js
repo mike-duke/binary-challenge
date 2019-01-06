@@ -1,5 +1,10 @@
-export const addArticles = (articles) => ({
-  type: 'ADD_ARTICLES',
+export const addRelevantArticles = (articles) => ({
+  type: 'ADD_RELEVANT_ARTICLES',
+  articles
+})
+
+export const addCurrentArticles = (articles) => ({
+  type: 'ADD_CURRENT_ARTICLES',
   articles
 })
 
