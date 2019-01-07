@@ -6,7 +6,7 @@ import CardContainer from './CardContainer';
 import { Switch, Route, withRouter } from 'react-router';
 import About from '../components/About';
 
-class App extends Component {
+export class App extends Component {
 
   render() {
     return (

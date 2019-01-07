@@ -7,7 +7,7 @@ import { fetchCurrentArticles } from '../thunks/fetchCurrentArticles';
 import Nav from '../components/Nav';
 import Filter from '../containers/Filter';
 
-class CardContainer extends Component {
+export class CardContainer extends Component {
 
   componentDidMount() {
     const relevantUrl = `https://newsapi.org/v2/everything?q=+(parent OR parents) AND +(kid OR kids OR child OR children) AND ${this.props.topic}&pageSize=20&language=en&sortBy=popularity&apiKey=${apiKey}`;

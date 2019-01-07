@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addTopic } from '../actions';
 
-class Landing extends Component {
+export class Landing extends Component {
 
   handleChange = (event) => {
     const selection = event.target.value;

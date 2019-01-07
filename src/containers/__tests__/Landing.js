@@ -1,7 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Landing from '../Landing';
-import { mapDispatchToProps } from '../Landing';
+import { Landing, mapDispatchToProps } from '../Landing';
 import { addTopic } from '../../actions';
 
 describe('Landing', () => {
@@ -13,17 +12,15 @@ describe('Landing', () => {
 
   describe('handleChange', () => {
     it('should call addTopicToStore when an option is selected', () => {
-      const wrapper = shallow(<Landing />);
+      const wrapper = shallow(<Landing history={[]} addTopicToStore={jest.fn()} />);
       const expected = 'Tabby';
-      
       wrapper.find('#landing-select').simulate('change', {
         target: {
           value: 'Tabby'
         }
       });
 
-      wrapper.setProps({addTopicToStore: jest.fn()});
-      const { addTopicToStore } = wrapper.instance.props;
+      const { addTopicToStore } = wrapper.instance().props;
       expect(addTopicToStore).toHaveBeenCalledWith(expected);
     });
   });

@@ -3,7 +3,9 @@
 exports[`Filter should match the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Connect(Filter) />,
+  Symbol(enzyme.__unrendered__): <Filter
+    relevantArticles={Array []}
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -15,59 +17,441 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "function",
+    "nodeType": "host",
     "props": Object {
-      "children": [Function],
+      "children": Array [
+        <select
+          id="filter-select"
+          name="filter-select"
+          onChange={[Function]}
+        >
+          <option
+            value=""
+          >
+            Select a different topic to gather articles
+          </option>
+          <option
+            value="anxiety"
+          >
+            Anxiety
+          </option>
+          <option
+            value="depression"
+          >
+            Depression
+          </option>
+          <option
+            value="ADHD"
+          >
+            ADHD
+          </option>
+          <option
+            value="autism"
+          >
+            Autism
+          </option>
+        </select>,
+        <select
+          id="source-select"
+          name="source-select"
+          onChange={[Function]}
+        >
+          <option
+            value=""
+          >
+            Select a source to gather specific articles
+          </option>
+        </select>,
+        <h2>
+          Torcano
+        </h2>,
+        <h1>
+          hello
+        </h1>,
+      ],
+      "className": "filter",
     },
     "ref": null,
-    "rendered": [Function],
-    "type": Object {
-      "$$typeof": Symbol(react.context),
-      "_calculateChangedBits": null,
-      "_context": Object {
-        "$$typeof": Symbol(react.context),
-        "Consumer": [Circular],
-        "Provider": Object {
-          "$$typeof": Symbol(react.provider),
-          "_context": [Circular],
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <option
+              value=""
+            >
+              Select a different topic to gather articles
+            </option>,
+            <option
+              value="anxiety"
+            >
+              Anxiety
+            </option>,
+            <option
+              value="depression"
+            >
+              Depression
+            </option>,
+            <option
+              value="ADHD"
+            >
+              ADHD
+            </option>,
+            <option
+              value="autism"
+            >
+              Autism
+            </option>,
+          ],
+          "id": "filter-select",
+          "name": "filter-select",
+          "onChange": [Function],
         },
-        "_calculateChangedBits": null,
-        "_currentRenderer": null,
-        "_currentRenderer2": null,
-        "_currentValue": null,
-        "_currentValue2": null,
-        "_threadCount": 0,
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Select a different topic to gather articles",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": "Select a different topic to gather articles",
+            "type": "option",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Anxiety",
+              "value": "anxiety",
+            },
+            "ref": null,
+            "rendered": "Anxiety",
+            "type": "option",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Depression",
+              "value": "depression",
+            },
+            "ref": null,
+            "rendered": "Depression",
+            "type": "option",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "ADHD",
+              "value": "ADHD",
+            },
+            "ref": null,
+            "rendered": "ADHD",
+            "type": "option",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Autism",
+              "value": "autism",
+            },
+            "ref": null,
+            "rendered": "Autism",
+            "type": "option",
+          },
+        ],
+        "type": "select",
       },
-    },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <option
+              value=""
+            >
+              Select a source to gather specific articles
+            </option>,
+            Array [],
+          ],
+          "id": "source-select",
+          "name": "source-select",
+          "onChange": [Function],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Select a source to gather specific articles",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": "Select a source to gather specific articles",
+            "type": "option",
+          },
+        ],
+        "type": "select",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Torcano",
+        },
+        "ref": null,
+        "rendered": "Torcano",
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "hello",
+        },
+        "ref": null,
+        "rendered": "hello",
+        "type": "h1",
+      },
+    ],
+    "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "function",
+      "nodeType": "host",
       "props": Object {
-        "children": [Function],
+        "children": Array [
+          <select
+            id="filter-select"
+            name="filter-select"
+            onChange={[Function]}
+          >
+            <option
+              value=""
+            >
+              Select a different topic to gather articles
+            </option>
+            <option
+              value="anxiety"
+            >
+              Anxiety
+            </option>
+            <option
+              value="depression"
+            >
+              Depression
+            </option>
+            <option
+              value="ADHD"
+            >
+              ADHD
+            </option>
+            <option
+              value="autism"
+            >
+              Autism
+            </option>
+          </select>,
+          <select
+            id="source-select"
+            name="source-select"
+            onChange={[Function]}
+          >
+            <option
+              value=""
+            >
+              Select a source to gather specific articles
+            </option>
+          </select>,
+          <h2>
+            Torcano
+          </h2>,
+          <h1>
+            hello
+          </h1>,
+        ],
+        "className": "filter",
       },
       "ref": null,
-      "rendered": [Function],
-      "type": Object {
-        "$$typeof": Symbol(react.context),
-        "_calculateChangedBits": null,
-        "_context": Object {
-          "$$typeof": Symbol(react.context),
-          "Consumer": [Circular],
-          "Provider": Object {
-            "$$typeof": Symbol(react.provider),
-            "_context": [Circular],
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <option
+                value=""
+              >
+                Select a different topic to gather articles
+              </option>,
+              <option
+                value="anxiety"
+              >
+                Anxiety
+              </option>,
+              <option
+                value="depression"
+              >
+                Depression
+              </option>,
+              <option
+                value="ADHD"
+              >
+                ADHD
+              </option>,
+              <option
+                value="autism"
+              >
+                Autism
+              </option>,
+            ],
+            "id": "filter-select",
+            "name": "filter-select",
+            "onChange": [Function],
           },
-          "_calculateChangedBits": null,
-          "_currentRenderer": null,
-          "_currentRenderer2": null,
-          "_currentValue": null,
-          "_currentValue2": null,
-          "_threadCount": 0,
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Select a different topic to gather articles",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": "Select a different topic to gather articles",
+              "type": "option",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Anxiety",
+                "value": "anxiety",
+              },
+              "ref": null,
+              "rendered": "Anxiety",
+              "type": "option",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Depression",
+                "value": "depression",
+              },
+              "ref": null,
+              "rendered": "Depression",
+              "type": "option",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "ADHD",
+                "value": "ADHD",
+              },
+              "ref": null,
+              "rendered": "ADHD",
+              "type": "option",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Autism",
+                "value": "autism",
+              },
+              "ref": null,
+              "rendered": "Autism",
+              "type": "option",
+            },
+          ],
+          "type": "select",
         },
-      },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <option
+                value=""
+              >
+                Select a source to gather specific articles
+              </option>,
+              Array [],
+            ],
+            "id": "source-select",
+            "name": "source-select",
+            "onChange": [Function],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Select a source to gather specific articles",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": "Select a source to gather specific articles",
+              "type": "option",
+            },
+          ],
+          "type": "select",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Torcano",
+          },
+          "ref": null,
+          "rendered": "Torcano",
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "hello",
+          },
+          "ref": null,
+          "rendered": "hello",
+          "type": "h1",
+        },
+      ],
+      "type": "div",
     },
   ],
   Symbol(enzyme.__options__): Object {
