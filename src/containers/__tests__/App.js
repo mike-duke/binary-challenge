@@ -1,10 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import CardContainer from '../CardContainer';
+import App from '../App';
 
-describe('CardContainer', () => {
+describe('App', () => {
   it('should match the snapshot', () => {
-    const wrapper = shallow(<CardContainer />);
+    const wrapper = shallow(<App />);
 
     expect(wrapper).toMatchSnapshot();
   });
