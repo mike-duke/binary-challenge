@@ -4,7 +4,7 @@ import { addTopic } from '../actions';
 import { fetchRelevantArticles } from '../thunks/fetchRelevantArticles';
 import apiKey from '../apiKey';
 
-class Filter extends Component {
+export class Filter extends Component {
   
   handleChange = (event) => {
     const { name, value } = event.target;
@@ -17,47 +17,58 @@ class Filter extends Component {
     }
     
     if (name === 'source-select' && value.includes('.')) {
-      
       selection = this.props.topic;
       url = `https://newsapi.org/v2/everything?q=+(parent OR parents) AND +(kid OR kids OR child OR children) AND ${selection}&domains=${lowerCaseValue}&language=en&sortBy=popularity&apiKey=${apiKey}`;
     } else if (name === 'source-select' && !value.includes('.')) {
       selection = this.props.topic;
       url = `https://newsapi.org/v2/everything?q=+(parent OR parents) AND +(kid OR kids OR child OR children) AND ${selection}&sources=${lowerCaseValue}&language=en&sortBy=popularity&apiKey=${apiKey}`;
     }
+
     this.props.addArticlesToStore(url);
     this.props.addTopicToStore(selection);
   }
 
-  render() {
-    console.log(this.props.path)
-    const sourceOptions = this.props.relevantArticles.reduce((sources, article) => {
-      if (!sources.includes(article.source.name)) {
-        sources.push(article.source);
+  filterSelections = () => {
+    const namesArray = this.props.relevantArticles.reduce((names, article) => {
+      if (!names.includes(article.source.name)) {
+        names.push(article.source.name);
       }
+      return names;
+    }, []);
+    
+    const sourcesObj = this.props.relevantArticles.reduce((sources, article) => {
+      sources[article.source.name] = article.source.id;
       return sources;
-    }, []).map((source) => {
-      if (source.name.includes('.com')) {
-        return <option value={source.name}>{source.name}</option>
+    }, {});
+
+    return namesArray.map((name) => {
+      if (name.includes('.com')) {
+        return <option value={name}>{name}</option>
       } else {
-        return <option value={source.id}>{source.name}</option>
+        return <option value={sourcesObj[name].id}>{name}</option>
       }
     })
+  }
+
+  render() {
+    const sourceOptions = this.filterSelections();
 
     return (
       <div className="filter">
-      <h2>Torcano</h2>
-      <select name="filter-select" id="filter-select" onChange={this.handleChange}>
-        <option value="">Select a different topic to gather articles</option>
-        <option value="anxiety">Anxiety</option>
-        <option value="depression">Depression</option>
-        <option value="ADHD">ADHD</option>
-        <option value="autism">Autism</option>
-      </select>
+        <select name="filter-select" id="filter-select" onChange={this.handleChange}>
+          <option value="">Select a different topic to gather articles</option>
+          <option value="anxiety">Anxiety</option>
+          <option value="depression">Depression</option>
+          <option value="ADHD">ADHD</option>
+          <option value="autism">Autism</option>
+        </select>
 
-      <select name="source-select" id="source-select" onChange={this.handleChange}>
-        <option value="">Select a source to gather specific articles</option>
-        {sourceOptions}
-      </select>
+        <select name="source-select" id="source-select" onChange={this.handleChange}>
+          <option value="">Select a source to gather specific articles</option>
+          {sourceOptions}
+        </select>
+        <h2>Torcano</h2>
+        <h1>hello</h1>
     </div>
   )
 }
