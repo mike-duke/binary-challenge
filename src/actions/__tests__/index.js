@@ -1,7 +1,7 @@
 import * as actions from '../index';
 
 describe('actions', () => {
-  const mockArticles = [{title: '10 Reasons Why Your Cat Is Trying To Kill You', By: 'Your cat'}];
+  const mockArticles = [{title: '10 Reasons Why Your Cat Is Trying To Kill You', author: 'Your cat'}];
   
   it('should return an array of articles with a type of "ADD_RELEVANT_ARTICLES"', () => { 
     const expected = {type: 'ADD_RELEVANT_ARTICLES', articles: mockArticles}
