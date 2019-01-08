@@ -5,6 +5,7 @@ import Landing from './Landing';
 import CardContainer from './CardContainer';
 import { Switch, Route, withRouter } from 'react-router';
 import About from '../components/About';
+import { Page404 } from '../components/Page404';
 
 export class App extends Component {
 
@@ -24,7 +25,8 @@ export class App extends Component {
           <Route path="/relevant" component={CardContainer} />
           <Route path="/current" component={CardContainer} />
           <Route path="/saved" component={CardContainer} />
-          <Route parh="/about" component={About} />
+          <Route path="/about" component={About} />
+          <Route component={Page404} />
         </Switch>
       </div>
     )
