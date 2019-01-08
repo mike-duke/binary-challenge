@@ -5,7 +5,6 @@ import Landing from './Landing';
 import CardContainer from './CardContainer';
 import { Switch, Route, withRouter } from 'react-router';
 import About from '../components/About';
-import {mockData} from '../mockData';
 
 export class App extends Component {
 
