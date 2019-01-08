@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Card } from '../components/Card';
 import apiKey from '../apiKey';
@@ -81,10 +82,11 @@ export const mapDispatchToProps = (dispatch) => ({
 
 export default connect(mapStateToProps, mapDispatchToProps)(CardContainer);
 
-// if (isLoading) {
-//   return (
-//     <div className="loading">
-//       <img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="loading spinner"/>
-//     </div>
-//   )
-// }
+CardContainer.propTypes = {
+  relevantArticles: PropTypes.array,
+  currentArticles: PropTypes.array,
+  topic: PropTypes.string,
+  isLoading: PropTypes.bool,
+  addRelevantArticlesToStore: PropTypes.func.isRequired,
+  addCurrentArticlesToStore: PropTypes.func.isRequired
+}

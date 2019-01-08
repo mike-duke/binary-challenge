@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop=types';
 
 export const Card = ({article}) => {
   const { urlToImage, title, author, url } = article
@@ -10,4 +11,8 @@ export const Card = ({article}) => {
       <p>By {author}</p>
     </article>
   )
+}
+
+Card.propTypes = {
+  article: PropTypes.object.isRequired
 }
