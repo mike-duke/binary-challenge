@@ -3,6 +3,12 @@
   width: 400px;
   background: #B98389;
   margin: 10px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
 }
 
 .image-container {
