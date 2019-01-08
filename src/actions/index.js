@@ -16,4 +16,9 @@ export const addTopic = (topic) => ({
 export const addErrorMessage = (message) => ({
   type: 'ADD_ERROR_MESSAGE',
   message
-})
+});
+
+export const isLoading = (bool) => ({
+  type: 'IS_LOADING',
+  bool
+});

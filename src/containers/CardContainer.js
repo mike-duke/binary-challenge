@@ -44,23 +44,34 @@ export class CardContainer extends Component {
       default:
         break;  
     }
-    
-    return (
-      <section className="card-and-nav-container">
+
+    if (this.props.isLoading) {
+      return (
+        <div className="card-container">
+          <div className="loading">
+            <img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="loading spinner"/>
+          </div>
+        </div>
+      )
+    } else {
+      return (
+        <section className="card-and-nav-container">
         <div className="card-container">
           {articlesToDisplay}
           <Nav />
         </div>
         <Filter path={path}/>
       </section>
-    )
+      )
+    }
   }
 }
 
 export const mapStateToProps = (state) => ({
   relevantArticles: state.relevantArticles,
   currentArticles: state.currentArticles,
-  topic: state.topic
+  topic: state.topic,
+  isLoading: state.isLoading
 })
 
 export const mapDispatchToProps = (dispatch) => ({
@@ -69,3 +80,11 @@ export const mapDispatchToProps = (dispatch) => ({
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(CardContainer);
+
+// if (isLoading) {
+//   return (
+//     <div className="loading">
+//       <img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="loading spinner"/>
+//     </div>
+//   )
+// }
