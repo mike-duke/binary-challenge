@@ -6,6 +6,7 @@ import { fetchRelevantArticles } from '../thunks/fetchRelevantArticles';
 import { fetchCurrentArticles } from '../thunks/fetchCurrentArticles';
 import Nav from '../components/Nav';
 import Filter from '../containers/Filter';
+import uuid from 'uuid';
 
 export class CardContainer extends Component {
 
@@ -22,12 +23,12 @@ export class CardContainer extends Component {
     let filterComponent;
     if (path === '/relevant') {
       articlesToDisplay = this.props.relevantArticles.map((article) => {
-        return <Card article={article} />
+        return <Card key={uuid()} article={article} />
       })
       filterComponent = <Filter path={this.props.match.path}/>
     } else if (path === '/current') {
       articlesToDisplay = this.props.currentArticles.map((article) => {
-        return <Card article={article} />
+        return <Card key={uuid()} article={article} />
       })
       filterComponent = null;
     } else if (path === '/saved') {
