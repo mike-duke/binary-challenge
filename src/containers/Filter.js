@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { addTopic } from '../actions';
 import { fetchRelevantArticles } from '../thunks/fetchRelevantArticles';
 import apiKey from '../apiKey';
+import uuid from 'uuid';
 
 export class Filter extends Component {
   
@@ -43,9 +44,9 @@ export class Filter extends Component {
 
     return namesArray.map((name) => {
       if (name.includes('.com')) {
-        return <option value={name}>{name}</option>
+        return <option key={uuid()} value={name}>{name}</option>
       } else {
-        return <option value={sourcesObj[name].id}>{name}</option>
+        return <option key={uuid()} value={sourcesObj[name].id}>{name}</option>
       }
     })
   }
