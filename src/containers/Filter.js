@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { addTopic } from '../actions';
 import { fetchRelevantArticles } from '../thunks/fetchRelevantArticles';
@@ -81,8 +82,14 @@ export const mapStateToProps = (state) => ({
 });
 
 export const mapDispatchToProps = (dispatch) => ({
-  addTopicToStore: (selection) => dispatch(addTopic(selection)),
-  addArticlesToStore: (url) => dispatch(fetchRelevantArticles(url))
+  addTopicToStore: (selection) => dispatch(addTopic(selection))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Filter);
+
+Filter.propTypes = {
+  relevantArticles: PropTypes.array.isRequired,
+  currentArticles: PropTypes.array.isRequired,
+  topic: PropTypes.string.isRequired,
+  addTopicToStore: PropTypes.func.isRequired
+}

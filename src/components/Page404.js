@@ -1,7 +1,6 @@
 import React from 'react';
 
-export const Page404 = (props) => {
-  console.log(props)
+export const Page404 = () => {
   return (
     <div className='four-oh-four'>
       <h1>This page does not exist</h1>

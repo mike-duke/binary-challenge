@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { addTopic } from '../actions';
 
@@ -33,3 +34,7 @@ export const mapDispatchToProps = (dispatch) => ({
 })
 
 export default connect(null, mapDispatchToProps)(Landing);
+
+Landing.propTypes = {
+  addTopicToStore: PropTypes.func.isRequired
+}
