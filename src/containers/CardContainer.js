@@ -11,29 +11,38 @@ import uuid from 'uuid';
 export class CardContainer extends Component {
 
   componentDidMount() {
-    const relevantUrl = `https://newsapi.org/v2/everything?q=+(parent OR parents) AND +(kid OR kids OR child OR children) AND ${this.props.topic}&pageSize=20&language=en&sortBy=popularity&apiKey=${apiKey}`;
+    const relevantUrl = `https://newsapi.org/v2/everything?q=+(parent OR parents) AND +(kid OR kid OR child OR children) AND ${this.props.topic} &language=en&sortBy=relevancy&apiKey=${apiKey}&pageSize=100`;
     this.props.addRelevantArticlesToStore(relevantUrl);
     const currentUrl = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=5b9c51c910284592a139f895c16d66ce';
     this.props.addCurrentArticlesToStore(currentUrl);
+  }
+
+  filterRelevantArticles = () => {
+    return this.props.relevantArticles.filter((article) => {
+      const { topic } = this.props;
+      return article.description.includes(topic) || article.title.includes(topic) || article.content.includes(topic);
+    }).map((article) => {
+      return <Card key={uuid()} article={article} />
+    });
   }
   
   render() {
     const { path } = this.props.match;
     let articlesToDisplay;
-    let filterComponent;
-    if (path === '/relevant') {
-      articlesToDisplay = this.props.relevantArticles.map((article) => {
-        return <Card key={uuid()} article={article} />
-      })
-      filterComponent = <Filter path={this.props.match.path}/>
-    } else if (path === '/current') {
-      articlesToDisplay = this.props.currentArticles.map((article) => {
-        return <Card key={uuid()} article={article} />
-      })
-      filterComponent = null;
-    } else if (path === '/saved') {
-      articlesToDisplay = "saved articles";
-      filterComponent = null;
+    switch(path) {
+      case '/relevant':
+        articlesToDisplay = this.filterRelevantArticles();
+        break
+      case '/current':
+        articlesToDisplay = this.props.currentArticles.map((article) => {
+          return <Card key={uuid()} article={article} />
+        });
+        break
+      case '/saved': 
+        articlesToDisplay = "saved articles";
+        break
+      default:
+        break;  
     }
     
     return (
@@ -42,7 +51,7 @@ export class CardContainer extends Component {
           {articlesToDisplay}
           <Nav />
         </div>
-        {filterComponent}
+        <Filter path={path}/>
       </section>
     )
   }
@@ -50,7 +59,8 @@ export class CardContainer extends Component {
 
 export const mapStateToProps = (state) => ({
   relevantArticles: state.relevantArticles,
-  currentArticles: state.currentArticles
+  currentArticles: state.currentArticles,
+  topic: state.topic
 })
 
 export const mapDispatchToProps = (dispatch) => ({
