@@ -8,6 +8,14 @@ import About from '../components/About';
 
 export class App extends Component {
 
+  // componentDidMount() {
+  //   const data = mockData.articles.filter((article) => {
+  //     return article.source.name.includes('Psychologytoday.com');
+  //   })
+
+  //   console.log(data);
+  // }
+
   render() {
     return (
       <div className="App">
