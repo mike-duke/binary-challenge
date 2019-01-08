@@ -3,7 +3,7 @@ import '../styles/index.scss';
 import { connect } from 'react-redux';
 import Landing from './Landing';
 import CardContainer from './CardContainer';
-import { Switch, Route, withRouter } from 'react-router';
+import { Switch, Route, withRouter, Redirect } from 'react-router';
 import About from '../components/About';
 
 export class App extends Component {
@@ -24,7 +24,8 @@ export class App extends Component {
           <Route path="/relevant" component={CardContainer} />
           <Route path="/current" component={CardContainer} />
           <Route path="/saved" component={CardContainer} />
-          <Route parh="/about" component={About} />
+          <Route path="/about" component={About} />
+          <Redirect to='/' />
         </Switch>
       </div>
     )
