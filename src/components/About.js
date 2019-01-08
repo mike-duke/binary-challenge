@@ -1,7 +1,7 @@
 import React from 'react';
-import Nav from './Nav';
+import { Nav } from './Nav';
 
-const About = () => {
+export const About = () => {
   return (
     <section>
       <p>More about Torcano</p>
@@ -9,5 +9,3 @@ const About = () => {
     </section>
   )
 }
-
-export default About;

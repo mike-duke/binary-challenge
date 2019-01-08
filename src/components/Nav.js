@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 
-class Nav extends Component {
+export class Nav extends Component {
 
   render() {
     return (
@@ -29,8 +29,6 @@ class Nav extends Component {
           </li>
         </ul>
       </nav>
-    )
+    );
   }
 }
-
-export default Nav;

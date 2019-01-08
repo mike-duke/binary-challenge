@@ -23,7 +23,7 @@ ShallowWrapper {
       [MockFunction] {
         "calls": Array [
           Array [
-            "https://newsapi.org/v2/everything?q=+(parent OR parents) AND +(kid OR kids OR child OR children) AND undefined&pageSize=20&language=en&sortBy=popularity&apiKey=5b9c51c910284592a139f895c16d66ce",
+            "https://newsapi.org/v2/everything?q=+(parent OR parents) AND +(kid OR kid OR child OR children) AND undefined &language=en&sortBy=relevancy&apiKey=5b9c51c910284592a139f895c16d66ce&pageSize=100",
           ],
         ],
         "results": Array [

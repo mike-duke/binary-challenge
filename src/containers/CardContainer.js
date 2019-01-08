@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Card } from '../components/Card';
+import uuid from 'uuid';
 import apiKey from '../apiKey';
 import { fetchRelevantArticles } from '../thunks/fetchRelevantArticles';
 import { fetchCurrentArticles } from '../thunks/fetchCurrentArticles';
-import Nav from '../components/Nav';
+import { Card } from '../components/Card';
+import { Nav } from '../components/Nav';
 import Filter from '../containers/Filter';
-import uuid from 'uuid';
 
 export class CardContainer extends Component {
 

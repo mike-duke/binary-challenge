@@ -1,12 +1,12 @@
-import React from 'react';
-import '../styles/index.scss';
-import { connect } from 'react-redux';
-import Landing from './Landing';
-import CardContainer from './CardContainer';
-import { Switch, Route, withRouter } from 'react-router';
-import About from '../components/About';
-import { Page404 } from '../components/Page404';
 import PropTypes from 'prop-types';
+import React from 'react';
+import { connect } from 'react-redux';
+import { Switch, Route, withRouter } from 'react-router';
+import { About } from '../components/About';
+import CardContainer from './CardContainer';
+import Landing from './Landing';
+import { Page404 } from '../components/Page404';
+import '../styles/index.scss';
 
 export const App = () => {
 
