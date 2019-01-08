@@ -14,6 +14,7 @@ export class Landing extends Component {
     return (
       <div className="landing">
         <h1>Torcano</h1>
+        {/* <div className="hurricane-image"></div> */}
         <p>Find the latest news from trusted sources on topics that affect your children, or see what is happening in the world today so you see what they see</p>
         <select name="landing-select" id="landing-select" onChange={this.handleChange}>
           <option value="">Select a topic to gather articles</option>

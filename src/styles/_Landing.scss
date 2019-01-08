@@ -6,10 +6,13 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 10px;
+  box-shadow: 10px 10px 10px #252323;
 
   h1 {
     font-family: 'Happy Monkey';
-    font-size: 3rem;
+    font-size: 4rem;
+    color: #B98389;
+    text-shadow: 2px 3px 6px #252323;
   }
 
   p {
@@ -22,3 +25,11 @@
     align-self: flex-end;
   }
 }
+
+// .hurricane-image {
+//   background-image: url('./images/hurricane.svg');
+//   // background-size: contain;
+//   height: 3rem;
+//   width: 3rem;
+//   // background: chartreuse;
+// }
