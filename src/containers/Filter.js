@@ -68,7 +68,6 @@ export class Filter extends Component {
           {sourceOptions}
         </select>
         <h2>Torcano</h2>
-        <h1>hello</h1>
     </div>
   )
 }
