@@ -88,8 +88,8 @@ export const mapDispatchToProps = (dispatch) => ({
 export default connect(mapStateToProps, mapDispatchToProps)(Filter);
 
 Filter.propTypes = {
-  relevantArticles: PropTypes.array.isRequired,
-  currentArticles: PropTypes.array.isRequired,
-  topic: PropTypes.string.isRequired,
-  addTopicToStore: PropTypes.func.isRequired
+  relevantArticles: PropTypes.array,
+  currentArticles: PropTypes.array,
+  topic: PropTypes.string,
+  addTopicToStore: PropTypes.func
 }

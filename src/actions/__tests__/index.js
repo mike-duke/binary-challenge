@@ -31,5 +31,12 @@ describe('actions', () => {
 
     const result = actions.addErrorMessage(mockMessage);
     expect(result).toEqual(expected);
-  })
-})
+  });
+
+  it('should return a boolean with a type of "IS_LOADING"', () => {
+    const expected = {type:'IS_LOADING', bool: true}
+
+    const result = actions.isLoading(true);
+    expect(result).toEqual(expected);
+  });
+});

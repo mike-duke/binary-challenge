@@ -8,7 +8,7 @@ export const fetchCurrentArticles = (url) => {
       if (!response.ok) {
         throw Error(response.statusText);
       } else if (response.ok && response.totalResults <= 0) {
-        dispatch(addErrorMessage('There are no articles that match this query'))
+        throw Error('There are no articles that match this query');
       }
       dispatch(isLoading(false));
       const result = await response.json();

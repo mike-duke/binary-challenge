@@ -65,9 +65,6 @@ ShallowWrapper {
         <h2>
           Torcano
         </h2>,
-        <h1>
-          hello
-        </h1>,
       ],
       "className": "filter",
     },
@@ -219,17 +216,6 @@ ShallowWrapper {
         "rendered": "Torcano",
         "type": "h2",
       },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "hello",
-        },
-        "ref": null,
-        "rendered": "hello",
-        "type": "h1",
-      },
     ],
     "type": "div",
   },
@@ -285,9 +271,6 @@ ShallowWrapper {
           <h2>
             Torcano
           </h2>,
-          <h1>
-            hello
-          </h1>,
         ],
         "className": "filter",
       },
@@ -438,17 +421,6 @@ ShallowWrapper {
           "ref": null,
           "rendered": "Torcano",
           "type": "h2",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "hello",
-          },
-          "ref": null,
-          "rendered": "hello",
-          "type": "h1",
         },
       ],
       "type": "div",

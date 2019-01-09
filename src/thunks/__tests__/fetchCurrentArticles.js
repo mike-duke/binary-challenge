@@ -1,9 +1,17 @@
 import { fetchCurrentArticles } from '../fetchCurrentArticles';
-import { addCurrentArticles, addErrorMessage } from '../../actions';
+import { addCurrentArticles, addErrorMessage, isLoading } from '../../actions';
 
 describe('fetchCurrentArticles', () => {
   const mockDispatch = jest.fn();
   const thunk = fetchCurrentArticles('cats-are-the-best.com');
+
+  it('should dispatch isLoading with true', () => {
+    window.fetch = jest.fn();
+    const expected = isLoading(true);
+
+    thunk(mockDispatch);
+    expect(mockDispatch).toHaveBeenCalledWith(expected);
+  });
   
   it('should call fetch with the correct parameters', () => {
     const expected = 'cats-are-the-best.com';
@@ -44,6 +52,22 @@ describe('fetchCurrentArticles', () => {
       return Promise.resolve({
         ok: true,
         totalResults: 0
+      });
+    });
+
+    await thunk(mockDispatch);
+    expect(mockDispatch).toHaveBeenCalledWith(expected);
+  });
+
+  it('should dispatch isLoading after the promise resolves', async () => {
+    const expected = isLoading(false);
+    window.fetch = jest.fn().mockImplementation(() => {
+      return Promise.resolve({
+        ok: true,
+        totalResults: 1,
+        json: () => Promise.resolve({
+          articles: [{title: 'Cats of the pacific northwest', author: 'Silas J. Cat'}]
+        })
       });
     });
 
