@@ -19,6 +19,21 @@ ShallowWrapper {
         ],
       }
     }
+    addDisplayedArticlesToStore={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            Array [],
+          ],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+        ],
+      }
+    }
     addRelevantArticlesToStore={
       [MockFunction] {
         "calls": Array [
@@ -181,6 +196,7 @@ ShallowWrapper {
         ],
       }
     }
+    addDisplayedArticlesToStore={[MockFunction]}
     addRelevantArticlesToStore={
       [MockFunction] {
         "calls": Array [
@@ -230,25 +246,29 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <div
-          className="card-container"
+          className="container-and-nav"
         >
-          <Card
-            article={
-              Object {
-                "author": "simple simon",
-                "content": "anxiety is a cat's companion",
-                "description": "a greeting",
-                "title": "hello world",
+          <div
+            className="container"
+          >
+            <Card
+              article={
+                Object {
+                  "author": "simple simon",
+                  "content": "anxiety is a cat's companion",
+                  "description": "a greeting",
+                  "title": "hello world",
+                }
               }
-            }
-          />
+            />
+          </div>
           <Nav />
         </div>,
         <Connect(Filter)
           path="/current"
         />,
       ],
-      "className": "card-and-nav-container",
+      "className": "card-container",
     },
     "ref": null,
     "rendered": Array [
@@ -258,7 +278,9 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            Array [
+            <div
+              className="container"
+            >
               <Card
                 article={
                   Object {
@@ -268,29 +290,53 @@ ShallowWrapper {
                     "title": "hello world",
                   }
                 }
-              />,
-            ],
+              />
+            </div>,
             <Nav />,
           ],
-          "className": "card-container",
+          "className": "container-and-nav",
         },
         "ref": null,
         "rendered": Array [
           Object {
             "instance": null,
-            "key": "eb24ff27-b6e5-4936-9430-1da8ad37b3d6",
-            "nodeType": "function",
+            "key": undefined,
+            "nodeType": "host",
             "props": Object {
-              "article": Object {
-                "author": "simple simon",
-                "content": "anxiety is a cat's companion",
-                "description": "a greeting",
-                "title": "hello world",
-              },
+              "children": Array [
+                <Card
+                  article={
+                    Object {
+                      "author": "simple simon",
+                      "content": "anxiety is a cat's companion",
+                      "description": "a greeting",
+                      "title": "hello world",
+                    }
+                  }
+                />,
+              ],
+              "className": "container",
             },
             "ref": null,
-            "rendered": null,
-            "type": [Function],
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": "781c47c2-1a28-4a24-b40e-edd7c9a3f50c",
+                "nodeType": "function",
+                "props": Object {
+                  "article": Object {
+                    "author": "simple simon",
+                    "content": "anxiety is a cat's companion",
+                    "description": "a greeting",
+                    "title": "hello world",
+                  },
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": "div",
           },
           Object {
             "instance": null,
@@ -326,25 +372,29 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <div
-            className="card-container"
+            className="container-and-nav"
           >
-            <Card
-              article={
-                Object {
-                  "author": "simple simon",
-                  "content": "anxiety is a cat's companion",
-                  "description": "a greeting",
-                  "title": "hello world",
+            <div
+              className="container"
+            >
+              <Card
+                article={
+                  Object {
+                    "author": "simple simon",
+                    "content": "anxiety is a cat's companion",
+                    "description": "a greeting",
+                    "title": "hello world",
+                  }
                 }
-              }
-            />
+              />
+            </div>
             <Nav />
           </div>,
           <Connect(Filter)
             path="/current"
           />,
         ],
-        "className": "card-and-nav-container",
+        "className": "card-container",
       },
       "ref": null,
       "rendered": Array [
@@ -354,7 +404,9 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              Array [
+              <div
+                className="container"
+              >
                 <Card
                   article={
                     Object {
@@ -364,29 +416,53 @@ ShallowWrapper {
                       "title": "hello world",
                     }
                   }
-                />,
-              ],
+                />
+              </div>,
               <Nav />,
             ],
-            "className": "card-container",
+            "className": "container-and-nav",
           },
           "ref": null,
           "rendered": Array [
             Object {
               "instance": null,
-              "key": "eb24ff27-b6e5-4936-9430-1da8ad37b3d6",
-              "nodeType": "function",
+              "key": undefined,
+              "nodeType": "host",
               "props": Object {
-                "article": Object {
-                  "author": "simple simon",
-                  "content": "anxiety is a cat's companion",
-                  "description": "a greeting",
-                  "title": "hello world",
-                },
+                "children": Array [
+                  <Card
+                    article={
+                      Object {
+                        "author": "simple simon",
+                        "content": "anxiety is a cat's companion",
+                        "description": "a greeting",
+                        "title": "hello world",
+                      }
+                    }
+                  />,
+                ],
+                "className": "container",
               },
               "ref": null,
-              "rendered": null,
-              "type": [Function],
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": "781c47c2-1a28-4a24-b40e-edd7c9a3f50c",
+                  "nodeType": "function",
+                  "props": Object {
+                    "article": Object {
+                      "author": "simple simon",
+                      "content": "anxiety is a cat's companion",
+                      "description": "a greeting",
+                      "title": "hello world",
+                    },
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+              ],
+              "type": "div",
             },
             Object {
               "instance": null,
@@ -454,6 +530,28 @@ ShallowWrapper {
         ],
       }
     }
+    addDisplayedArticlesToStore={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            Array [
+              Object {
+                "author": "simple simon",
+                "content": "anxiety is a cat's companion",
+                "description": "a greeting",
+                "title": "hello world",
+              },
+            ],
+          ],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+        ],
+      }
+    }
     addRelevantArticlesToStore={
       [MockFunction] {
         "calls": Array [
@@ -503,25 +601,29 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <div
-          className="card-container"
+          className="container-and-nav"
         >
-          <Card
-            article={
-              Object {
-                "author": "simple simon",
-                "content": "anxiety is a cat's companion",
-                "description": "a greeting",
-                "title": "hello world",
+          <div
+            className="container"
+          >
+            <Card
+              article={
+                Object {
+                  "author": "simple simon",
+                  "content": "anxiety is a cat's companion",
+                  "description": "a greeting",
+                  "title": "hello world",
+                }
               }
-            }
-          />
+            />
+          </div>
           <Nav />
         </div>,
         <Connect(Filter)
           path="/relevant"
         />,
       ],
-      "className": "card-and-nav-container",
+      "className": "card-container",
     },
     "ref": null,
     "rendered": Array [
@@ -531,7 +633,9 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            Array [
+            <div
+              className="container"
+            >
               <Card
                 article={
                   Object {
@@ -541,29 +645,53 @@ ShallowWrapper {
                     "title": "hello world",
                   }
                 }
-              />,
-            ],
+              />
+            </div>,
             <Nav />,
           ],
-          "className": "card-container",
+          "className": "container-and-nav",
         },
         "ref": null,
         "rendered": Array [
           Object {
             "instance": null,
-            "key": "d5e1fcbe-2abe-4976-9a6b-5cf59891f535",
-            "nodeType": "function",
+            "key": undefined,
+            "nodeType": "host",
             "props": Object {
-              "article": Object {
-                "author": "simple simon",
-                "content": "anxiety is a cat's companion",
-                "description": "a greeting",
-                "title": "hello world",
-              },
+              "children": Array [
+                <Card
+                  article={
+                    Object {
+                      "author": "simple simon",
+                      "content": "anxiety is a cat's companion",
+                      "description": "a greeting",
+                      "title": "hello world",
+                    }
+                  }
+                />,
+              ],
+              "className": "container",
             },
             "ref": null,
-            "rendered": null,
-            "type": [Function],
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": "22ce93fd-821c-412d-bc60-f607db72f856",
+                "nodeType": "function",
+                "props": Object {
+                  "article": Object {
+                    "author": "simple simon",
+                    "content": "anxiety is a cat's companion",
+                    "description": "a greeting",
+                    "title": "hello world",
+                  },
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": "div",
           },
           Object {
             "instance": null,
@@ -599,25 +727,29 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <div
-            className="card-container"
+            className="container-and-nav"
           >
-            <Card
-              article={
-                Object {
-                  "author": "simple simon",
-                  "content": "anxiety is a cat's companion",
-                  "description": "a greeting",
-                  "title": "hello world",
+            <div
+              className="container"
+            >
+              <Card
+                article={
+                  Object {
+                    "author": "simple simon",
+                    "content": "anxiety is a cat's companion",
+                    "description": "a greeting",
+                    "title": "hello world",
+                  }
                 }
-              }
-            />
+              />
+            </div>
             <Nav />
           </div>,
           <Connect(Filter)
             path="/relevant"
           />,
         ],
-        "className": "card-and-nav-container",
+        "className": "card-container",
       },
       "ref": null,
       "rendered": Array [
@@ -627,7 +759,9 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              Array [
+              <div
+                className="container"
+              >
                 <Card
                   article={
                     Object {
@@ -637,29 +771,53 @@ ShallowWrapper {
                       "title": "hello world",
                     }
                   }
-                />,
-              ],
+                />
+              </div>,
               <Nav />,
             ],
-            "className": "card-container",
+            "className": "container-and-nav",
           },
           "ref": null,
           "rendered": Array [
             Object {
               "instance": null,
-              "key": "d5e1fcbe-2abe-4976-9a6b-5cf59891f535",
-              "nodeType": "function",
+              "key": undefined,
+              "nodeType": "host",
               "props": Object {
-                "article": Object {
-                  "author": "simple simon",
-                  "content": "anxiety is a cat's companion",
-                  "description": "a greeting",
-                  "title": "hello world",
-                },
+                "children": Array [
+                  <Card
+                    article={
+                      Object {
+                        "author": "simple simon",
+                        "content": "anxiety is a cat's companion",
+                        "description": "a greeting",
+                        "title": "hello world",
+                      }
+                    }
+                  />,
+                ],
+                "className": "container",
               },
               "ref": null,
-              "rendered": null,
-              "type": [Function],
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": "22ce93fd-821c-412d-bc60-f607db72f856",
+                  "nodeType": "function",
+                  "props": Object {
+                    "article": Object {
+                      "author": "simple simon",
+                      "content": "anxiety is a cat's companion",
+                      "description": "a greeting",
+                      "title": "hello world",
+                    },
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+              ],
+              "type": "div",
             },
             Object {
               "instance": null,
@@ -727,6 +885,7 @@ ShallowWrapper {
         ],
       }
     }
+    addDisplayedArticlesToStore={[MockFunction]}
     addRelevantArticlesToStore={
       [MockFunction] {
         "calls": Array [
@@ -767,15 +926,18 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <div
-          className="card-container"
+          className="container-and-nav"
         >
+          <div
+            className="container"
+          />
           <Nav />
         </div>,
         <Connect(Filter)
           path=""
         />,
       ],
-      "className": "card-and-nav-container",
+      "className": "card-container",
     },
     "ref": null,
     "rendered": Array [
@@ -785,14 +947,27 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            undefined,
+            <div
+              className="container"
+            />,
             <Nav />,
           ],
-          "className": "card-container",
+          "className": "container-and-nav",
         },
         "ref": null,
         "rendered": Array [
-          undefined,
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": undefined,
+              "className": "container",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
           Object {
             "instance": null,
             "key": undefined,
@@ -827,15 +1002,18 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <div
-            className="card-container"
+            className="container-and-nav"
           >
+            <div
+              className="container"
+            />
             <Nav />
           </div>,
           <Connect(Filter)
             path=""
           />,
         ],
-        "className": "card-and-nav-container",
+        "className": "card-container",
       },
       "ref": null,
       "rendered": Array [
@@ -845,14 +1023,27 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              undefined,
+              <div
+                className="container"
+              />,
               <Nav />,
             ],
-            "className": "card-container",
+            "className": "container-and-nav",
           },
           "ref": null,
           "rendered": Array [
-            undefined,
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": undefined,
+                "className": "container",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
             Object {
               "instance": null,
               "key": undefined,
