@@ -25,6 +25,7 @@ describe('CardContainer', () => {
       currentArticles={[]}
       addRelevantArticlesToStore={jest.fn()} 
       addCurrentArticlesToStore={jest.fn()}
+      addDisplayedArticlesToStore={jest.fn()}
       isLoading={false} />);
     });
   
@@ -46,6 +47,7 @@ describe('CardContainer', () => {
       }]}
         addRelevantArticlesToStore={jest.fn()} 
         addCurrentArticlesToStore={jest.fn()}
+        addDisplayedArticlesToStore={jest.fn()}
         isLoading={false} />);
 
     expect(wrapper).toMatchSnapshot();
@@ -60,6 +62,7 @@ describe('CardContainer', () => {
         currentArticles={[]}
         addRelevantArticlesToStore={jest.fn()} 
         addCurrentArticlesToStore={jest.fn()}
+        addDisplayedArticlesToStore={jest.fn()}
         isLoading={false} />);
 
     expect(wrapper).toMatchSnapshot();
@@ -74,6 +77,7 @@ describe('CardContainer', () => {
       currentArticles={[]}
       addRelevantArticlesToStore={jest.fn()} 
       addCurrentArticlesToStore={jest.fn()}
+      addDisplayedArticlesToStore={jest.fn()}
       isLoading={true} />);
     
     expect(wrapper).toMatchSnapshot();

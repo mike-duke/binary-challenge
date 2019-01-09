@@ -19,10 +19,19 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <p>
-          More about Torcano
+          My son has had severe anxiety since he was very young. When he was smaller, he once described the feeling he gets as a Torcano (a mix between a tornado and a volcano). This became our code word for him to let us know when he was having an anxiety attack.
         </p>,
-        <Nav />,
+        <p>
+          My boys are both much older now (15 and 21), but I’ve spent all of their lives trying to help them navigate the world as best they can through ADHD, anxiety, and depression. As they were growing up, I would have liked to have a place where I could do research on these topics with the knowledge that the articles I read were from sources that other parents trust.
+        </p>,
+        <p>
+          Also, I’ve added an area to view current events, as I’ve found that the goings on of the world at large can have a significant effect on children with anxiety and depression.
+        </p>,
+        <p>
+          I hope you find something helpful here that will help you help your own children, and most of all, know that you are not alone in your search.
+        </p>,
       ],
+      "className": "about",
     },
     "ref": null,
     "rendered": Array [
@@ -31,20 +40,44 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "More about Torcano",
+          "children": "My son has had severe anxiety since he was very young. When he was smaller, he once described the feeling he gets as a Torcano (a mix between a tornado and a volcano). This became our code word for him to let us know when he was having an anxiety attack.",
         },
         "ref": null,
-        "rendered": "More about Torcano",
+        "rendered": "My son has had severe anxiety since he was very young. When he was smaller, he once described the feeling he gets as a Torcano (a mix between a tornado and a volcano). This became our code word for him to let us know when he was having an anxiety attack.",
         "type": "p",
       },
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "class",
-        "props": Object {},
+        "nodeType": "host",
+        "props": Object {
+          "children": "My boys are both much older now (15 and 21), but I’ve spent all of their lives trying to help them navigate the world as best they can through ADHD, anxiety, and depression. As they were growing up, I would have liked to have a place where I could do research on these topics with the knowledge that the articles I read were from sources that other parents trust.",
+        },
         "ref": null,
-        "rendered": null,
-        "type": [Function],
+        "rendered": "My boys are both much older now (15 and 21), but I’ve spent all of their lives trying to help them navigate the world as best they can through ADHD, anxiety, and depression. As they were growing up, I would have liked to have a place where I could do research on these topics with the knowledge that the articles I read were from sources that other parents trust.",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Also, I’ve added an area to view current events, as I’ve found that the goings on of the world at large can have a significant effect on children with anxiety and depression.",
+        },
+        "ref": null,
+        "rendered": "Also, I’ve added an area to view current events, as I’ve found that the goings on of the world at large can have a significant effect on children with anxiety and depression.",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "I hope you find something helpful here that will help you help your own children, and most of all, know that you are not alone in your search.",
+        },
+        "ref": null,
+        "rendered": "I hope you find something helpful here that will help you help your own children, and most of all, know that you are not alone in your search.",
+        "type": "p",
       },
     ],
     "type": "section",
@@ -57,10 +90,19 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <p>
-            More about Torcano
+            My son has had severe anxiety since he was very young. When he was smaller, he once described the feeling he gets as a Torcano (a mix between a tornado and a volcano). This became our code word for him to let us know when he was having an anxiety attack.
           </p>,
-          <Nav />,
+          <p>
+            My boys are both much older now (15 and 21), but I’ve spent all of their lives trying to help them navigate the world as best they can through ADHD, anxiety, and depression. As they were growing up, I would have liked to have a place where I could do research on these topics with the knowledge that the articles I read were from sources that other parents trust.
+          </p>,
+          <p>
+            Also, I’ve added an area to view current events, as I’ve found that the goings on of the world at large can have a significant effect on children with anxiety and depression.
+          </p>,
+          <p>
+            I hope you find something helpful here that will help you help your own children, and most of all, know that you are not alone in your search.
+          </p>,
         ],
+        "className": "about",
       },
       "ref": null,
       "rendered": Array [
@@ -69,20 +111,44 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "More about Torcano",
+            "children": "My son has had severe anxiety since he was very young. When he was smaller, he once described the feeling he gets as a Torcano (a mix between a tornado and a volcano). This became our code word for him to let us know when he was having an anxiety attack.",
           },
           "ref": null,
-          "rendered": "More about Torcano",
+          "rendered": "My son has had severe anxiety since he was very young. When he was smaller, he once described the feeling he gets as a Torcano (a mix between a tornado and a volcano). This became our code word for him to let us know when he was having an anxiety attack.",
           "type": "p",
         },
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
-          "props": Object {},
+          "nodeType": "host",
+          "props": Object {
+            "children": "My boys are both much older now (15 and 21), but I’ve spent all of their lives trying to help them navigate the world as best they can through ADHD, anxiety, and depression. As they were growing up, I would have liked to have a place where I could do research on these topics with the knowledge that the articles I read were from sources that other parents trust.",
+          },
           "ref": null,
-          "rendered": null,
-          "type": [Function],
+          "rendered": "My boys are both much older now (15 and 21), but I’ve spent all of their lives trying to help them navigate the world as best they can through ADHD, anxiety, and depression. As they were growing up, I would have liked to have a place where I could do research on these topics with the knowledge that the articles I read were from sources that other parents trust.",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Also, I’ve added an area to view current events, as I’ve found that the goings on of the world at large can have a significant effect on children with anxiety and depression.",
+          },
+          "ref": null,
+          "rendered": "Also, I’ve added an area to view current events, as I’ve found that the goings on of the world at large can have a significant effect on children with anxiety and depression.",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "I hope you find something helpful here that will help you help your own children, and most of all, know that you are not alone in your search.",
+          },
+          "ref": null,
+          "rendered": "I hope you find something helpful here that will help you help your own children, and most of all, know that you are not alone in your search.",
+          "type": "p",
         },
       ],
       "type": "section",
