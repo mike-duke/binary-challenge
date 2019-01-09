@@ -6,23 +6,15 @@ export class Nav extends Component {
   render() {
     return (
       <nav>
-        <ul>
-          <li>
-            <NavLink to="/relevant">
-              Relevant Articles
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/current">
-              Current Events
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="about">
-              What is Torcano?
-            </NavLink>
-          </li>
-        </ul>
+        <NavLink to="/relevant" className="navlink">
+          Relevant Articles
+        </NavLink>
+        <NavLink to="/current" className="navlink">
+          Current Events
+        </NavLink>
+        <NavLink to="/about" className="navlink">
+          What is Torcano?
+        </NavLink>
       </nav>
     );
   }

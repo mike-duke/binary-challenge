@@ -8,6 +8,7 @@ import { fetchCurrentArticles } from '../thunks/fetchCurrentArticles';
 import { Card } from '../components/Card';
 import { Nav } from '../components/Nav';
 import Filter from '../containers/Filter';
+import { About } from '../components/About';
 
 export class CardContainer extends Component {
 
@@ -39,6 +40,9 @@ export class CardContainer extends Component {
           return <Card key={uuid()} article={article} />
         });
         break;
+      case '/about':
+        articlesToDisplay = <About />;
+        break;
       default:
         break;  
     }
@@ -53,13 +57,15 @@ export class CardContainer extends Component {
       )
     } else {
       return (
-        <section className="card-and-nav-container">
-        <div className="card-container">
-          {articlesToDisplay}
-          <Nav />
-        </div>
-        <Filter path={path}/>
-      </section>
+        <section className="card-container">
+          <div className="container-and-nav">
+            <div className="container">
+              {articlesToDisplay}
+            </div>
+            <Nav />
+          </div>
+          <Filter path={path}/>
+        </section>
       )
     }
   }

@@ -14,7 +14,7 @@ export const App = () => {
         <Route path="/relevant" component={CardContainer} />
         <Route path="/current" component={CardContainer} />
         <Route path="/saved" component={CardContainer} />
-        <Route path="/about" component={About} />
+        <Route path="/about" component={CardContainer} />
         <Route component={Page404} />
       </Switch>
     </div>
