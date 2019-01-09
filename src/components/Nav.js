@@ -11,15 +11,10 @@ export class Nav extends Component {
             <NavLink to="/relevant">
               Relevant Articles
             </NavLink>
-            </li>
+          </li>
           <li>
             <NavLink to="/current">
               Current Events
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/saved">
-              Saved Articles: <span>0</span>
             </NavLink>
           </li>
           <li>
