@@ -1,5 +1,5 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 
 export const Card = ({article}) => {
   const { urlToImage, title, author, url, source } = article
@@ -9,7 +9,7 @@ export const Card = ({article}) => {
       </div>
       <h3>{title}</h3>
       <p>By {author}</p>
-      <p>{source.name}</p>
+      <p>For <span>{source.name}</span></p>
     </article>
   )
 }

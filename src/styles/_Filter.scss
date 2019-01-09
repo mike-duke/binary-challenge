@@ -1,8 +1,11 @@
 .filter {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-end;
+  position: absolute;
+  top: 85vh;
+  left: 70vw;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: flex-end;
+  // align-items: flex-end;
   
   h2 {
     font-family: "Happy Monkey";

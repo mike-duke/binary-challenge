@@ -1,13 +1,27 @@
 .card {
   height: 400px;
-  width: 400px;
+  width: 350px;
   background: #B98389;
-  margin: 10px;
+  margin: 20px 10px 0 10px;
   transition: all 0.3s ease;
+  overflow: scroll;
+
+  h3, p {
+    margin: 10px;
+  }
+
+  h3 {
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+  }
+
+  p span {
+    color: #9DA39A;
+  }
 
   &:hover {
     cursor: pointer;
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 }
 

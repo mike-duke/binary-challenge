@@ -1,4 +1,19 @@
-nav li {
+.navlink {
+  display: block;
+  background: #7E8287;
   margin-bottom: 10px;
-  background: white;
+  height: 50px;
+  text-decoration: none;
+  text-align: right;
+  color: #000;
+  padding: 8px;
+  width: 85px;
+}
+
+.active {
+  background: #fff;
+  color: #7E8287;
+  width: 100px;
+  height: 75px;
+  padding: 20px 8px;
 }

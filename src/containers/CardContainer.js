@@ -5,9 +5,11 @@ import uuid from 'uuid';
 import apiKey from '../apiKey';
 import { fetchRelevantArticles } from '../thunks/fetchRelevantArticles';
 import { fetchCurrentArticles } from '../thunks/fetchCurrentArticles';
+import { addDisplayedArticles } from '../actions';
 import { Card } from '../components/Card';
 import { Nav } from '../components/Nav';
 import Filter from '../containers/Filter';
+import { About } from '../components/About';
 
 export class CardContainer extends Component {
 
@@ -19,10 +21,14 @@ export class CardContainer extends Component {
   }
 
   filterRelevantArticles = () => {
-    return this.props.relevantArticles.filter((article) => {
+    const filteredArticles = this.props.relevantArticles.filter((article) => {
       const { topic } = this.props;
       return article.description.includes(topic) || article.title.includes(topic) || article.content.includes(topic);
-    }).map((article) => {
+    });
+
+    this.props.addDisplayedArticlesToStore(filteredArticles)
+    
+    return filteredArticles.map((article) => {
       return <Card key={uuid()} article={article} />
     });
   }
@@ -39,6 +45,9 @@ export class CardContainer extends Component {
           return <Card key={uuid()} article={article} />
         });
         break;
+      case '/about':
+        articlesToDisplay = <About />;
+        break;
       default:
         break;  
     }
@@ -53,13 +62,15 @@ export class CardContainer extends Component {
       )
     } else {
       return (
-        <section className="card-and-nav-container">
-        <div className="card-container">
-          {articlesToDisplay}
-          <Nav />
-        </div>
-        <Filter path={path}/>
-      </section>
+        <section className="card-container">
+          <div className="container-and-nav">
+            <div className="container">
+              {articlesToDisplay}
+            </div>
+            <Nav />
+          </div>
+          <Filter path={path}/>
+        </section>
       )
     }
   }
@@ -74,7 +85,8 @@ export const mapStateToProps = (state) => ({
 
 export const mapDispatchToProps = (dispatch) => ({
   addRelevantArticlesToStore: (url) => dispatch(fetchRelevantArticles(url)),
-  addCurrentArticlesToStore: url => dispatch(fetchCurrentArticles(url))
+  addCurrentArticlesToStore: url => dispatch(fetchCurrentArticles(url)),
+  addDisplayedArticlesToStore: (articles) => dispatch(addDisplayedArticles(articles))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(CardContainer);
