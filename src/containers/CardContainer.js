@@ -5,6 +5,7 @@ import uuid from 'uuid';
 import apiKey from '../apiKey';
 import { fetchRelevantArticles } from '../thunks/fetchRelevantArticles';
 import { fetchCurrentArticles } from '../thunks/fetchCurrentArticles';
+import { addDisplayedArticles } from '../actions';
 import { Card } from '../components/Card';
 import { Nav } from '../components/Nav';
 import Filter from '../containers/Filter';
@@ -20,10 +21,14 @@ export class CardContainer extends Component {
   }
 
   filterRelevantArticles = () => {
-    return this.props.relevantArticles.filter((article) => {
+    const filteredArticles = this.props.relevantArticles.filter((article) => {
       const { topic } = this.props;
       return article.description.includes(topic) || article.title.includes(topic) || article.content.includes(topic);
-    }).map((article) => {
+    });
+
+    this.props.addDisplayedArticlesToStore(filteredArticles)
+    
+    return filteredArticles.map((article) => {
       return <Card key={uuid()} article={article} />
     });
   }
@@ -80,7 +85,8 @@ export const mapStateToProps = (state) => ({
 
 export const mapDispatchToProps = (dispatch) => ({
   addRelevantArticlesToStore: (url) => dispatch(fetchRelevantArticles(url)),
-  addCurrentArticlesToStore: url => dispatch(fetchCurrentArticles(url))
+  addCurrentArticlesToStore: url => dispatch(fetchCurrentArticles(url)),
+  addDisplayedArticlesToStore: (articles) => dispatch(addDisplayedArticles(articles))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(CardContainer);

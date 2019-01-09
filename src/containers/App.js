@@ -1,6 +1,5 @@
 import React from 'react';
 import { Switch, Route } from 'react-router';
-import { About } from '../components/About';
 import CardContainer from './CardContainer';
 import Landing from './Landing';
 import { Page404 } from '../components/Page404';

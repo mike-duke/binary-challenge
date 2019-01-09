@@ -22,3 +22,8 @@ export const isLoading = (bool) => ({
   type: 'IS_LOADING',
   bool
 });
+
+export const addDisplayedArticles = (articles) => ({
+  type: 'ADD_DISPLAYED_ARTICLES',
+  articles
+})
