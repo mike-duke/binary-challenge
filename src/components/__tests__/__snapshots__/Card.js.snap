@@ -7,6 +7,9 @@ ShallowWrapper {
     article={
       Object {
         "author": "All the cats",
+        "source": Object {
+          "name": "Cat News",
+        },
         "title": "Cats are cool",
       }
     }
@@ -39,6 +42,12 @@ ShallowWrapper {
         <p>
           By 
           All the cats
+        </p>,
+        <p>
+          For 
+          <span>
+            Cat News
+          </span>
         </p>,
       ],
       "className": "card",
@@ -88,6 +97,35 @@ ShallowWrapper {
         ],
         "type": "p",
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "For ",
+            <span>
+              Cat News
+            </span>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "For ",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Cat News",
+            },
+            "ref": null,
+            "rendered": "Cat News",
+            "type": "span",
+          },
+        ],
+        "type": "p",
+      },
     ],
     "type": "article",
   },
@@ -112,6 +150,12 @@ ShallowWrapper {
           <p>
             By 
             All the cats
+          </p>,
+          <p>
+            For 
+            <span>
+              Cat News
+            </span>
           </p>,
         ],
         "className": "card",
@@ -158,6 +202,35 @@ ShallowWrapper {
           "rendered": Array [
             "By ",
             "All the cats",
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "For ",
+              <span>
+                Cat News
+              </span>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "For ",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Cat News",
+              },
+              "ref": null,
+              "rendered": "Cat News",
+              "type": "span",
+            },
           ],
           "type": "p",
         },
