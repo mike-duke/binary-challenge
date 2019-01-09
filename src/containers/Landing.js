@@ -36,5 +36,5 @@ export const mapDispatchToProps = (dispatch) => ({
 export default connect(null, mapDispatchToProps)(Landing);
 
 Landing.propTypes = {
-  addTopicToStore: PropTypes.func.isRequired
+  addTopicToStore: PropTypes.func
 }

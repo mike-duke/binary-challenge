@@ -10,7 +10,6 @@ export class Filter extends Component {
   
   handleChange = (event) => {
     const { name, value } = event.target;
-    console.log(value)
     const lowerCaseValue = value.toLowerCase();
     let url;
     let selection;
@@ -26,7 +25,7 @@ export class Filter extends Component {
       selection = this.props.topic;
       url = `https://newsapi.org/v2/everything?q=+(parent OR parents) AND +(kid OR kids OR child OR children) AND ${selection}&sources=${lowerCaseValue}&language=en&sortBy=popularity&apiKey=${apiKey}`;
     }
-    this.props.addArticlesToStore(url);
+    this.props.addRelevantArticlesToStore(url);
     this.props.addTopicToStore(selection);
   }
 
@@ -77,19 +76,21 @@ export class Filter extends Component {
 
 export const mapStateToProps = (state) => ({
   relevantArticles: state.relevantArticles,
-  currentArticles: state.currentArticlesrticles,
+  currentArticles: state.currentArticles,
   topic: state.topic
 });
 
 export const mapDispatchToProps = (dispatch) => ({
-  addTopicToStore: (selection) => dispatch(addTopic(selection))
+  addTopicToStore: (selection) => dispatch(addTopic(selection)),
+  addRelevantArticlesToStore: (url) => dispatch(fetchRelevantArticles(url))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Filter);
 
 Filter.propTypes = {
-  relevantArticles: PropTypes.array.isRequired,
-  currentArticles: PropTypes.array.isRequired,
-  topic: PropTypes.string.isRequired,
-  addTopicToStore: PropTypes.func.isRequired
+  relevantArticles: PropTypes.array,
+  currentArticles: PropTypes.array,
+  topic: PropTypes.string,
+  addTopicToStore: PropTypes.func,
+  addRelevantArticlesToStore: PropTypes.func
 }

@@ -37,7 +37,10 @@ ShallowWrapper {
         />
         <Route
           component={[Function]}
-          parh="/about"
+          path="/about"
+        />
+        <Route
+          component={[Function]}
         />
       </Switch>,
       "className": "App",
@@ -68,7 +71,10 @@ ShallowWrapper {
           />,
           <Route
             component={[Function]}
-            parh="/about"
+            path="/about"
+          />,
+          <Route
+            component={[Function]}
           />,
         ],
       },
@@ -129,7 +135,18 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "component": [Function],
-            "parh": "/about",
+            "path": "/about",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
           },
           "ref": null,
           "rendered": null,
@@ -166,7 +183,10 @@ ShallowWrapper {
           />
           <Route
             component={[Function]}
-            parh="/about"
+            path="/about"
+          />
+          <Route
+            component={[Function]}
           />
         </Switch>,
         "className": "App",
@@ -197,7 +217,10 @@ ShallowWrapper {
             />,
             <Route
               component={[Function]}
-              parh="/about"
+              path="/about"
+            />,
+            <Route
+              component={[Function]}
             />,
           ],
         },
@@ -258,7 +281,18 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "component": [Function],
-              "parh": "/about",
+              "path": "/about",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "component": [Function],
             },
             "ref": null,
             "rendered": null,

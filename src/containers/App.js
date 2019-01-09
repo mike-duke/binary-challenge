@@ -1,15 +1,12 @@
 import React from 'react';
-import '../styles/index.scss';
-import { connect } from 'react-redux';
-import Landing from './Landing';
+import { Switch, Route } from 'react-router';
+import { About } from '../components/About';
 import CardContainer from './CardContainer';
-import { Switch, Route, withRouter } from 'react-router';
-import About from '../components/About';
+import Landing from './Landing';
 import { Page404 } from '../components/Page404';
-import PropTypes from 'prop-types';
+import '../styles/index.scss';
 
 export const App = () => {
-
   return (
     <div className="App">
       <Switch>
@@ -24,14 +21,4 @@ export const App = () => {
   )
 }
 
-export const mapStateToProps = (state) => ({
-  articles: state.articles,
-  topic: state.topic
-});
-
-export default withRouter(connect(mapStateToProps)(App));
-
-App.propTypes = {
-  articles: PropTypes.array,
-  topic: PropTypes.string
-}
+export default App;
