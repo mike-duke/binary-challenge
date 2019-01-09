@@ -278,7 +278,7 @@ ShallowWrapper {
         "rendered": Array [
           Object {
             "instance": null,
-            "key": "f4fdfb1d-515a-4db4-a323-e8401fe5d061",
+            "key": "eb24ff27-b6e5-4936-9430-1da8ad37b3d6",
             "nodeType": "function",
             "props": Object {
               "article": Object {
@@ -374,7 +374,7 @@ ShallowWrapper {
           "rendered": Array [
             Object {
               "instance": null,
-              "key": "f4fdfb1d-515a-4db4-a323-e8401fe5d061",
+              "key": "eb24ff27-b6e5-4936-9430-1da8ad37b3d6",
               "nodeType": "function",
               "props": Object {
                 "article": Object {
@@ -551,7 +551,7 @@ ShallowWrapper {
         "rendered": Array [
           Object {
             "instance": null,
-            "key": "6f27ac0a-60b9-4888-afcb-9a17fc279220",
+            "key": "d5e1fcbe-2abe-4976-9a6b-5cf59891f535",
             "nodeType": "function",
             "props": Object {
               "article": Object {
@@ -647,7 +647,7 @@ ShallowWrapper {
           "rendered": Array [
             Object {
               "instance": null,
-              "key": "6f27ac0a-60b9-4888-afcb-9a17fc279220",
+              "key": "d5e1fcbe-2abe-4976-9a6b-5cf59891f535",
               "nodeType": "function",
               "props": Object {
                 "article": Object {
