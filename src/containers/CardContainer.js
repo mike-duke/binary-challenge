@@ -14,23 +14,10 @@ import { About } from '../components/About';
 export class CardContainer extends Component {
 
   componentDidMount() {
-    const relevantUrl = `https://newsapi.org/v2/everything?q=+(parent OR parents) AND +(kid OR kid OR child OR children) AND ${this.props.topic} &language=en&sortBy=relevancy&apiKey=${apiKey}&pageSize=100`;
+    const relevantUrl = `https://newsapi.org/v2/everything?q=+(parent%20OR%20parents)%20AND%20+(kid%20OR%20kid%20OR%20child%20OR%20children)%20AND%20${this.props.topic}&language=en&sortBy=relevancy&apiKey=${apiKey}`;
     this.props.addRelevantArticlesToStore(relevantUrl);
     const currentUrl = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`;
     this.props.addCurrentArticlesToStore(currentUrl);
-  }
-
-  filterRelevantArticles = () => {
-    const filteredArticles = this.props.relevantArticles.filter((article) => {
-      const { topic } = this.props;
-      return article.description.includes(topic) || article.title.includes(topic) || article.content.includes(topic);
-    });
-
-    this.props.addDisplayedArticlesToStore(filteredArticles)
-    
-    return filteredArticles.map((article) => {
-      return <Card key={uuid()} article={article} />
-    });
   }
   
   render() {
@@ -38,7 +25,9 @@ export class CardContainer extends Component {
     let articlesToDisplay;
     switch(path) {
       case '/relevant':
-        articlesToDisplay = this.filterRelevantArticles();
+        articlesToDisplay = this.props.relevantArticles.map((article) => {
+          return <Card key={uuid()} article={article} />
+        });
         break;
       case '/current':
         articlesToDisplay = this.props.currentArticles.map((article) => {
